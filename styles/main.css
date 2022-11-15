@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "Mark Pro";
+    src: local("Mark-Pro"),
+      url("/fonts/Mark-Pro.ttf")
+  }
+*{
+    font-family: "Mark Pro";
+}
+.rectangle {
+    height: 257px;
+    width: 100%;
+    background-color: #003CFB;
+  }
+  .hello-van-ons {
+    height: 28px;
+    width: 161px;
+    color: #FFFFFF;
+    font-family: "Mark Pro";
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.55px;
+    line-height: 28px;
+  }
+  .group {
+    padding-top: 59px;
+    padding-left: 27px;
+    height: 73px;
+    width: 338px;
+  }
+  .you-have-two-todos {
+    height: 40px;
+    width: 222px;
+    color: rgba(255,255,255,0.8);
+    font-family: "Mark Pro";
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    line-height: 20px;
+  }
+.fa-bell{
+    float: left;
+    height: 21px;
+    width: 18px;
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 21px;
+    padding-top: 15px;
+    padding-right: 25px;
+    position: relative;
+    cursor: pointer;
+}
+.bitmap {
+    height: 46px;
+    width: 46px;
+    float: right;
+  }
+  .oval {
+    height: 52px;
+    width: 52px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
+  }
+  .mask {
+    height: 46px;
+    width: 46px;
+    background-color: #D8D8D8;
+  }
+.mask{
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.bell-icon{
+    float: right;
+    padding-top: 20px;
+}
+.orange-bell-circle{
+    font-size: 10px;
+    color: #E43F28;
+    position: absolute;
+    font-size: 0.3em;
+    top: 15px;
+    color: #E43F28;
+    right: 27px;
+  }
+/* .todobody{
+    background-color: white;
+    width: 80%;
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    outline: solid 1px gray;
+    box-sizing: border-box;
+    padding: 10px;
+} */
+/* .todo{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: solid 1px red;
+    outline-offset: -20px;
+    border-radius: 15px;
+    background-clip: content-box;
+    background-color: purple;
+} */
+.todobody{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-50px;
+    padding: .3rem;
+    background-color: white;
+    width: 92%;
+    outline:solid 1px gray;
+    border-radius: 15px;
+}
+/* .todo{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: purple;
+} */
+article h4{
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-bottom:5px;
+    margin-right: 10px;
+}
+.todo {
+    margin: 1rem;
+    padding: .3rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    outline: solid 1px #595959;
+}
+
+.todo p {
+    margin: 0px;
+    margin-left: 45px;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #595959;
+    font-family: "Mark Pro";
+}
+.fa-check{
+    color:#02C758;
+    float: left;
+    outline: solid 2px #02C758;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 2px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* .fa-exclamation{
+    color: #E43F28;
+    font-size:20px;
+    float: left;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top:2px;
+    padding-bottom: 1px;
+    font-size: 14px;
+    outline: solid 2px #E43F28;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+} */
+
+.gray-check{
+    color: #595959;
+    font-size: 18px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.gray-check:hover{
+    background-color: #02C758;
+    border-radius: 15px;
+    color: #595959;
+}
+.red-exclam{
+    float: left;
+}
+.red-circle{
+    font-size: 18px;
+    color: #E43F28;
+}
+.red-exclam{
+    font-size: 16px;
+    color: #E43F28;
+}
+.sticky-button{
+    background-color: #003CFB;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+.sticky-button-div{
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
