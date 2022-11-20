@@ -5,55 +5,64 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Van-ons todo</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/styles/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/styles/second.css'>
     <script src="https://kit.fontawesome.com/b1b257b8c8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="rectangle">
         <div class="group">
+            <div class="user-text">
+                <h1 class="hello-van-ons">Hello, van-ons</h1>
+                <p class="you-have-todos">You have two todo's, one of them is overdue</p>
+            </div>
             <div class="bell-icon">
-                <div class="bitmap">
-                    <img src="img/cow.png" class="mask">
-                </div>
                 <span class="fa-solid fa-bell">
                     <span class="fa-solid fa-circle orange-bell-circle"></span>           
                 </span>
-             </div>
-            <h1 class="hello-van-ons">Hello, van-ons</h1>
-            <p class="you-have-two-todos">You have two todo's, one of them is overdue</p>
+                <img src="img/cow.png" class="cow-icon">
+            </div>
         </div>
     </div>
-    <div class="todobody">
+    <div class="todo-list-wrapper">
         <article class="todo">
-    
-            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-check clickable-button"></i>
             <h4>Walking the dog</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ex dolorem vitae soluta, culpa accusamus id blanditiis labore error veritatis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem odio facilis ratione. Necessitatibus?</p>
         </article>
         <article class="todo">
-            <span class="fa-stack fa-1x red-exclam">
+            <span class="fa-stack fa-1x red-exclam clickable-button">
                 <i class="fa-solid fa-exclamation fa-stack-1x red-exclam"></i>
                 <i class="fa-regular fa-circle fa-stack-1x red-circle"></i>
             </span>
             <h4>Do the dishes</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt similique voluptatibus libero soluta sint laboriosam quae repellendus voluptate adipisci suscipit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur expedita dignissimos natus adipisci!</p>
         </article>
         <article class="todo">
-            <i class="fa-regular fa-circle gray-check"></i>
+            <i class="fa-regular fa-circle gray-check clickable-button"></i>
             <h4>Do the dishes</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt similique voluptatibus libero soluta sint laboriosam quae repellendus voluptate adipisci suscipit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium ex distinctio inventore.</p>
         </article>
     </div>
-    <form>
+    <!-- <form>
         <label for="ttitle">Task title:</label>
         <input type="text" id="ttitle" name="ttitle"><br><br>
         <label for="tdesc">Task description:</label>
         <input type="text" id="tdesc" name="tdesc"><br><br>
-        <input type="submit" value="Github test" onclick="return false">
-    </form>
-    <div class="sticky-button-div">
+        <input type="submit" value="submit" onclick="return false" class="clickable-button">
+    </form> -->
+    <div class="sticky-button-div clickable-button">
         <i class="fa-sharp fa-solid fa-plus sticky-button"></i>
     </div>
+    <!-- <div class="popup-form-trans">
+        <div class="popup-form">
+            <i class="fa-solid fa-xmark exit-popup"></i>
+            <h1>Add new todo</h1>
+            <input type="text" placeholder="What are you going to do?" class="task-name-input">
+            <input type="text" placeholder="Temporary placeholder" class="task-name-input">
+            <input type="text" placeholder="What are you going to do?" class="task-descr-input">
+            <input type="submit" value="Save todo" onclick="return false" class="clickable-button submit-new-todo">
+        </div>
+    </div> -->
 </body>
 <script src='main.js'></script>
 </html>

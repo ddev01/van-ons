@@ -6,10 +6,15 @@
 *{
     font-family: "Mark Pro";
 }
+body{
+    width: 390px;
+    margin: auto;
+}
 .rectangle {
     height: 257px;
-    width: 100%;
+    width: 390px;
     background-color: #003CFB;
+    margin: auto;
   }
   .hello-van-ons {
     height: 28px;
@@ -26,6 +31,7 @@
     padding-left: 27px;
     height: 73px;
     width: 338px;
+    float: right;
   }
   .you-have-two-todos {
     height: 40px;
@@ -48,6 +54,9 @@
     padding-right: 25px;
     position: relative;
     cursor: pointer;
+}
+.user-text{
+    float: left;
 }
 .bitmap {
     height: 46px;
@@ -109,7 +118,7 @@
 .todobody{
     margin-left: auto;
     margin-right: auto;
-    margin-top:-50px;
+    margin-top:-25%;
     padding: .3rem;
     background-color: white;
     width: 92%;
