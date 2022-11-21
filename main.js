@@ -1,7 +1,6 @@
+// Add listener to + button and create popup form to create new todo
 const stickyButtonElement = document.querySelector("i.sticky-button")
-var tempID = 5
 stickyButtonElement.addEventListener("click", (e)=>{
-  let secondID = tempID
   let bodyTarget = document.querySelector('body')
   stickyButtonElement.classList.add('hide-item')
   let newElement = document.createElement('div')
@@ -29,7 +28,6 @@ stickyButtonElement.addEventListener("click", (e)=>{
     let target = document.querySelector("div.todo-list-wrapper");
     let titleVal = document.querySelector('.task-name-input').value
     let dateVal = document.querySelector('.date-input').value
-    console.log(dateVal)
     let descrVal = document.querySelector('.task-descr-input').value
     let newElement = document.createElement('article')
     let todoCount = document.querySelectorAll('article.todo').length
@@ -44,7 +42,7 @@ stickyButtonElement.addEventListener("click", (e)=>{
         <div class="dropdown-edit">
           <i class="fa-sharp fa-solid fa-pencil edit-pencil"></i>
           <span class="edit-span">Edit</span></div>
-        <div class="dropdown-remove ${'dropdown-remove-'+tempID}">
+        <div class="dropdown-remove">
           <i class="fa-solid fa-trash edit-remove"></i>
           <span class="remove-span">Remove</span></div>
       </div>
@@ -55,21 +53,22 @@ stickyButtonElement.addEventListener("click", (e)=>{
     <p class="date"><i class="fa-solid fa-calendar-days"></i>${dateVal}</p>
     `;
     newElement.innerHTML = content
-    newElement.classList.add('todo', 'todo-gray', 'unfinished-task','todo'+tempID)
+    newElement.classList.add('todo', 'todo-gray', 'unfinished-task')
     target.append(newElement)
     updateTodoCounter()
     removeListener(newElement)
   })
-  //The following code can also be put into the parent so the popup form gets hidden after submitting new tasks instead of only after clicking X
+
+  //Hides pupup form. Can also be put into the parent so the popup form gets hidden after submitting new tasks instead of only after clicking X
   document.querySelector('.exit-popup').addEventListener('click', (e)=>{
     let popupForm = document.querySelector('div.popup-form-trans')
     popupForm.remove()
     stickyButtonElement.classList.remove('hide-item')
 
   })
+  // Adds listener to drop down 'remove' and deletes the parent article on click
   function removeListener(element){
-    let target = element.querySelector('.dropdown-remove-'+tempID)
-    tempID++
+    let target = element.querySelector('.dropdown-remove')
     target.addEventListener('click',(e)=>{
       element.remove()
     })
