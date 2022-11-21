@@ -42,7 +42,7 @@ body{
   height: 28px; 
   width: 161px;
   color: #FFFFFF;
-  font-family: "Mark Pro Bold";
+  font-family: "Mark Pro";
   font-size: 22px;
   letter-spacing: 0.55px;
   line-height: 28px;
@@ -70,6 +70,7 @@ body{
   position: relative;
   cursor: pointer;
 }
+
 .orange-bell-circle{
   font-size: 10px;
   color: #E43F28;
@@ -112,10 +113,14 @@ article h4{
   margin: 1rem;
   padding: .3rem;
   font-size: 1.2rem;
-  border: 2px solid #E0E0E0;
   border-radius: 3px;
 }
-
+.todo-gray{
+  border: 2px solid #E0E0E0;
+}
+.todo-overdue{
+  border: 2px solid #E43F28;
+}
 .todo p {
   margin: 0px;
   margin-left: 48px;
@@ -172,7 +177,7 @@ article h4{
   position: fixed;
   bottom: 0;
   margin-top: 10vh;
-  margin-bottom: 1vh;
+  margin-bottom: 1vh;#E43F28
   left: 43vw;
 }
 .clickable-button{
@@ -187,7 +192,7 @@ article h4{
   width: 100vw;
 }
 .popup-form{
-  background-color: white;
+  background-color: #FFFFFF;
   font-weight: bold;
   width: 100vw;
   margin-top: 30vh;
@@ -239,7 +244,6 @@ article h4{
   border-radius: 3px;
   background-color: #FAF6E9;
   border:none;
-
 }
 .task-descr-input::placeholder{
   color: #B89B36;
@@ -369,18 +373,21 @@ p.date{
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 1em;
-  padding-right: 3.5em;  
+  padding-right: 3.5em; 
+  cursor: pointer
 }
 .dropdown-remove{
   outline: solid 1px #E0E0E0;
   color: #4B4B4B;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: yellow;
+  background-color: #FFFFFF;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 1em;
   padding-right: 3.5em;  
+  cursor: pointer
+
 }
 
 .dropdown-container:focus {

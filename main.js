@@ -19,7 +19,7 @@ stickyButtonElement.addEventListener("click", (e)=>{
     <h1>Date</h1>
     <input type="date" id="start" class="date-input" name="trip-start" value="${year}-${month}-${day}">
   </div>
-  <input type="text" placeholder="What are you going to do?" class="task-descr-input clickable-button">
+  <textarea placeholder="What are you going to do?" class="task-descr-input clickable-button"></textarea>
   <input type="submit" value="Save todo" onclick="return false" class="clickable-button submit-new-todo">
 </div>
   `
@@ -44,7 +44,7 @@ stickyButtonElement.addEventListener("click", (e)=>{
         <div class="dropdown-edit">
           <i class="fa-sharp fa-solid fa-pencil edit-pencil"></i>
           <span class="edit-span">Edit</span></div>
-        <div class="dropdown-remove ${'dropdown-remove-'+tempID}">
+        <div class="${'dropdown-remove-'+tempID} dropdown-remove ">
           <i class="fa-solid fa-trash edit-remove"></i>
           <span class="remove-span">Remove</span></div>
       </div>
@@ -55,11 +55,8 @@ stickyButtonElement.addEventListener("click", (e)=>{
     <p class="date"><i class="fa-solid fa-calendar-days"></i>${dateVal}</p>
     `;
     newElement.innerHTML = content
-    newElement.classList.add('todo', 'unfinished-task','todo'+tempID)
+    newElement.classList.add('todo'+tempID,'todo', 'todo-gray', 'unfinished-task')
     target.append(newElement)
-    // newElement.querySelector('.dropdown-remove-'+tempID).addEventListener('click',(e)=>{
-    //   console.log('found clickz')
-    // })
     updateTodoCounter()
     removeListener(newElement)
   })
@@ -74,23 +71,10 @@ stickyButtonElement.addEventListener("click", (e)=>{
     let target = element.querySelector('.dropdown-remove-'+tempID)
     tempID++
     target.addEventListener('click',(e)=>{
-      console.log('found clickz')
-      console.log(target.classList)
+      element.remove()
     })
   }
-  // function tempName(){
-  //   let targetClass = '.dropdown-remove-'+tempID
-  //   console.log(targetClass)
-  //   let quick = document.querySelector(targetClass)
-  //   tempID++
-  //   quick.addEventListener('click', (e)=>{
-  //     console.log('clicked new gen')
-      
-  // })
-  // }
-  
-})
-//Turns ints into words E.G. 5 > Five, 21 > Twenty one
+
 function numToWord(num){
   var ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
               'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];

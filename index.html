@@ -12,7 +12,7 @@
   <div class="rectangle">
     <div class="group">
       <div class="user-text">
-        <h1 class="hello-van-ons">Hello, <span style="font-family: Mark Pro Bold;">van-ons</span></h1>
+        <p class="hello-van-ons">Hello, <span style="font-family: Mark Pro Bold;">van-ons</span></p>
         <p class="you-have-todos"></p>
       </div>
       <div class="bell-icon">
@@ -24,15 +24,29 @@
     </div>
   </div>
   <div class="todo-list-wrapper">
-    <article class="todo finished-task">
+    <article class="todo todo-gray finished-task">
       <span class="fa-stack fa-1x green-checkmark clickable-button">
         <i class="fa-solid fa-check fa-stack-1x green-checkmark"></i>
         <i class="fa-regular fa-circle fa-stack-1x green-circle"></i>
       </span>
+      <div class="menu-nav">
+        <div class="dropdown-container" tabindex="-1">
+          <div class="three-dots"></div>
+          <div class="dropdown">
+            <div class="dropdown-edit">
+              <i class="fa-sharp fa-solid fa-pencil edit-pencil"></i>
+              <span class="edit-span">Edit</span></div>
+            <div class="dropdown-remove">
+              <i class="fa-solid fa-trash edit-remove"></i>
+              <span class="remove-span">Remove</span></div>
+          </div>
+        </div>
+      </div>
       <h4>Walking the dog</h4>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem odio facilis ratione. Necessitatibus?</p>
+      <p class="date"><i class="fa-solid fa-calendar-days"></i>2022-11-18</p>
     </article>
-    <article class="todo overdue-task">
+    <article class="todo todo-overdue overdue-task">
       <span class="fa-stack fa-1x red-exclam clickable-button">
         <i class="fa-solid fa-exclamation fa-stack-1x red-exclam"></i>
         <i class="fa-regular fa-circle fa-stack-1x red-circle"></i>
@@ -54,20 +68,26 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur expedita dignissimos natus adipisci!</p>
       <p class="date"><i class="fa-solid fa-calendar-days"></i>2022-11-01</p>
     </article>
-    <article class="todo unfinished-task">
-        <span class="fa-stack fa-1x green-checkmark clickable-button">
-          <i class="fa-regular fa-circle gray-circle fa-stack-1x clickable-button"></i>
-        </span>
-      <h4>Get groceries</h4>
-      <p>Items that are needed: meat, pasta, sauce, salt, drinks.</p>
-    </article>
-    <article class="todo unfinished-task">
+    <article class="todo todo-gray unfinished-task">
       <span class="fa-stack fa-1x green-checkmark clickable-button">
         <i class="fa-regular fa-circle gray-circle fa-stack-1x clickable-button"></i>
       </span>
+      <div class="menu-nav">
+        <div class="dropdown-container" tabindex="-1">
+          <div class="three-dots"></div>
+          <div class="dropdown">
+            <div class="dropdown-edit">
+              <i class="fa-sharp fa-solid fa-pencil edit-pencil"></i>
+              <span class="edit-span">Edit</span></div>
+            <div class="dropdown-remove">
+              <i class="fa-solid fa-trash edit-remove"></i>
+              <span class="remove-span">Remove</span></div>
+          </div>
+        </div>
+      </div>
       <h4>Get groceries</h4>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quam ipsa at magni maxime impedit.</p>
-      <p>Yesterday</p>
+      <p class="date"><i class="fa-solid fa-calendar-days"></i>Yesterday</p>
     </article>
   </div>
   <!-- <form>
