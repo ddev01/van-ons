@@ -30,7 +30,7 @@ body{
 .bell-icon{
   display: flex;
   margin-top: 2vh;
-  margin-left: 13vw;
+  margin-left: 50px;
 }
 
 /* Text styling */
@@ -177,8 +177,9 @@ article h4{
   position: fixed;
   bottom: 0;
   margin-top: 10vh;
-  margin-bottom: 1vh;#E43F28
+  margin-bottom: 1vh;
   left: 43vw;
+
 }
 .clickable-button{
   cursor: pointer;
@@ -251,7 +252,7 @@ article h4{
 }
 .submit-new-todo{
   position: relative;
-  width: 87vw;
+  width: 86vw;
   left: 7vw;
   height: 8vh;
   background-color: blue;
@@ -389,7 +390,11 @@ p.date{
   cursor: pointer
 
 }
-
+.task-descr-input::placeholder{
+  color: #B89B36;
+  padding: 15px;
+  text-indent: 0;
+}
 .dropdown-container:focus {
   outline: none;
 }

@@ -17,9 +17,9 @@ stickyButtonElement.addEventListener("click", (e)=>{
   <input type="text" placeholder="What are you going to do?" class="task-name-input clickable-button">
   <div class="date-div">
     <h1>Date</h1>
-    <input type="date" id="start" class="date-input" name="trip-start" value="${year}-${month}-${day}">
+    <input type="date" id="start" class="date-input clickable-button" name="trip-start" value="${year}-${month}-${day}">
   </div>
-  <textarea placeholder="What are you going to do?" class="task-descr-input clickable-button"></textarea>
+  <textarea placeholder="Write a note, for example: Going to walk to grandma via the grocery store to pick up some groceries" class="task-descr-input clickable-button"></textarea>
   <input type="submit" value="Save todo" onclick="return false" class="clickable-button submit-new-todo">
 </div>
   `
@@ -44,7 +44,7 @@ stickyButtonElement.addEventListener("click", (e)=>{
         <div class="dropdown-edit">
           <i class="fa-sharp fa-solid fa-pencil edit-pencil"></i>
           <span class="edit-span">Edit</span></div>
-        <div class="${'dropdown-remove-'+tempID} dropdown-remove ">
+        <div class="dropdown-remove ${'dropdown-remove-'+tempID}">
           <i class="fa-solid fa-trash edit-remove"></i>
           <span class="remove-span">Remove</span></div>
       </div>
@@ -55,7 +55,7 @@ stickyButtonElement.addEventListener("click", (e)=>{
     <p class="date"><i class="fa-solid fa-calendar-days"></i>${dateVal}</p>
     `;
     newElement.innerHTML = content
-    newElement.classList.add('todo'+tempID,'todo', 'todo-gray', 'unfinished-task')
+    newElement.classList.add('todo', 'todo-gray', 'unfinished-task','todo'+tempID)
     target.append(newElement)
     updateTodoCounter()
     removeListener(newElement)
@@ -74,7 +74,8 @@ stickyButtonElement.addEventListener("click", (e)=>{
       element.remove()
     })
   }
-
+})
+//Turns ints into words E.G. 5 > Five, 21 > Twenty one
 function numToWord(num){
   var ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
               'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
@@ -110,6 +111,6 @@ function updateTodoCounter(){
 updateTodoCounter();
 document.querySelectorAll('div.dropdown-remove').forEach(item=>{
   item.addEventListener('click',(e)=>{
-    console.log(item.id, 'Clicked')
+    item.closest('article').remove()
   })
 })
