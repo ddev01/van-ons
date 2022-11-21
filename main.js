@@ -1,6 +1,7 @@
 const stickyButtonElement = document.querySelector("i.sticky-button")
 var tempID = 5
 stickyButtonElement.addEventListener("click", (e)=>{
+  let secondID = tempID
   let bodyTarget = document.querySelector('body')
   stickyButtonElement.classList.add('hide-item')
   let newElement = document.createElement('div')

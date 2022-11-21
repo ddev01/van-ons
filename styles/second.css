@@ -1,7 +1,12 @@
 @font-face {
   font-family: "Mark Pro";
-  src: local("Mark-Pro"),
-    url("/fonts/Mark-Pro.ttf")
+  src: local("Mark Pro"),
+    url("/fonts/Mark Pro.ttf")
+  }
+@font-face {
+  font-family: "Mark Pro Bold";
+  src: local("Mark-Pro-Bold"),
+    url("/fonts/Mark-Pro-Bold.ttf")
   }
 *{
   font-family: "Mark Pro";
@@ -20,26 +25,25 @@ body{
   display: flex;
   /* height: 100%;
   width: 100%; */
-  margin-top: %;
+  margin-top: ;
 }
 .bell-icon{
   display: flex;
-  margin-top: 4%;
-  margin-left: 13%;
+  margin-top: 2vh;
+  margin-left: 13vw;
 }
 
 /* Text styling */
 .user-text{
-  margin-left: 6%;
-  margin-top: 3%;
+  margin-left: 6vw;
+  margin-top: 2vh;
 }
 .hello-van-ons{
   height: 28px; 
   width: 161px;
   color: #FFFFFF;
-  font-family: "Mark Pro";
+  font-family: "Mark Pro Bold";
   font-size: 22px;
-  font-weight: bold;
   letter-spacing: 0.55px;
   line-height: 28px;
 }
@@ -280,13 +284,12 @@ article h4{
   float: left;
   font-size: 1.2em;
   color: #595959;
-  margin-top: 1.3vh;
+  margin-top: 0.8vh;
   margin-left: 2vw;
 }
 .date-div input{
   float: right;
-  margin-top: 1vh;
-  margin-top: 1.3vh;
+  margin-top: 0.8vh;
   margin-right: 2vw;
 }
 textarea:focus, input:focus{
