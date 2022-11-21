@@ -25,7 +25,10 @@
   </div>
   <div class="todo-list-wrapper">
     <article class="todo finished-task">
-      <i class="fa-solid fa-check clickable-button"></i>
+      <span class="fa-stack fa-1x green-checkmark clickable-button">
+        <i class="fa-solid fa-check fa-stack-1x green-checkmark"></i>
+        <i class="fa-regular fa-circle fa-stack-1x green-circle"></i>
+      </span>
       <h4>Walking the dog</h4>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem odio facilis ratione. Necessitatibus?</p>
     </article>
@@ -38,14 +41,19 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur expedita dignissimos natus adipisci!</p>
     </article>
     <article class="todo unfinished-task">
-      <i class="fa-regular fa-circle gray-check clickable-button"></i>
+        <span class="fa-stack fa-1x green-checkmark clickable-button">
+          <i class="fa-regular fa-circle gray-circle fa-stack-1x clickable-button"></i>
+        </span>
       <h4>Do the dishes</h4>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium ex distinctio inventore.</p>
     </article>
     <article class="todo unfinished-task">
-      <i class="fa-regular fa-circle gray-check clickable-button"></i>
+      <span class="fa-stack fa-1x green-checkmark clickable-button">
+        <i class="fa-regular fa-circle gray-circle fa-stack-1x clickable-button"></i>
+      </span>
       <h4>Get groceries</h4>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quam ipsa at magni maxime impedit.</p>
+      <p>Yesterday</p>
     </article>
   </div>
   <!-- <form>

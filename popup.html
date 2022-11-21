@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>popup</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/second.css'>
+</head>
+<body>
+<div class="popup-form">
+  <i class="fa-solid fa-xmark exit-popup clickable-button"></i>
+  <h1 class="todo-h1">Add new todo</h1>
+  <input type="text" placeholder="What are you going to do?" class="task-name-input clickable-button">
+  <div class="date-input">
+    <h1>Date</h1>
+    <input type="date" id="start" class="date-input" name="trip-start" value="${year}-${month}-${day}">
+  </div>
+  <input type="text" placeholder="What are you going to do?" class="task-descr-input clickable-button">
+  <input type="submit" value="Save todo" onclick="return false" class="clickable-button submit-new-todo">
+</div>
+</body>
+<script src='main.js'></script>
+</html>

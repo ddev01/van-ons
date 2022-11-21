@@ -99,7 +99,7 @@ body{
   margin-bottom: 8vh;
 }
 article h4{
-  margin-top: 10px;
+  margin-top: 7px;
   margin-left: 45px;
   margin-bottom:5px;
   margin-right: 10px;
@@ -114,7 +114,7 @@ article h4{
 
 .todo p {
   margin: 0px;
-  margin-left: 45px;
+  margin-left: 48px;
   margin-right: 10px;
   font-size: 14px;
   letter-spacing: 0.35px;
@@ -122,7 +122,7 @@ article h4{
   color: #595959;
   width: 76%;
 }
-.fa-check{
+/* .fa-check{
   color:#02C758;
   float: left;
   outline: solid 2px #02C758;
@@ -132,29 +132,29 @@ article h4{
   padding: 2px;
   margin-top: 10px;
   margin-left: 10px;
-}
-.gray-check{
+} */
+.gray-circle{
   color: #595959;
-  font-size: 18px;
-  float: left;
-  margin-top: 10px;
-  margin-left: 10px;
+  font-size: 21px;
 }
-.gray-check:hover{
-  background-color: #02C758;
-  border-radius: 15px;
-  color: #595959;
+.green-circle{
+  font-size: 21px;
+  color: green;
 }
-.red-exclam{
+.green-checkmark{
   float: left;
+  font-size: 15px;
+  font-weight: bold;
+  color: green;
 }
 .red-circle{
-  font-size: 18px;
+  font-size: 21px;
   color: #E43F28;
 }
 .red-exclam{
-  font-size: 16px;
-  color: #E43F28;
+  float: left;
+  font-size: 15px;
+  color: #E43F28
 }
 .sticky-button{
   background-color: #003CFB;
@@ -183,13 +183,14 @@ article h4{
 }
 .popup-form{
   background-color: white;
+  font-weight: bold;
   width: 100vw;
   margin-top: 30vh;
   height: 70vh;
   border-radius: 0.4em 0.4em 0 0;
 
 }
-.popup-form h1{
+.todo-h1{
   position: relative;
   width: 75vw;
   left: 7vw;
@@ -205,8 +206,12 @@ article h4{
   margin-bottom: 2vh;
   border-radius: 3px;
   background-color: #F6F8F9;
-
-  
+  box-shadow: 0 1px 0 0 #EEF0F1;
+  border: none;
+}
+.task-name-input::placeholder{
+  color: #AEAEAE;
+  text-indent: 2vw;
 }
 .task-name-input-2{
   position: relative;
@@ -228,7 +233,12 @@ article h4{
   position: relative;
   border-radius: 3px;
   background-color: #FAF6E9;
+  border:none;
 
+}
+.task-descr-input::placeholder{
+  color: #B89B36;
+  text-indent: 2vw;
 }
 .submit-new-todo{
   position: relative;
@@ -255,4 +265,30 @@ article h4{
   text-decoration: underline;
   font-weight: bold;
   color: white;
+}
+.date-div{
+  position: relative;
+  height: 5vh;
+  width: 86vw;
+  left: 7vw;
+  margin-bottom: 2vh;
+  border-radius: 3px;
+  background-color: #F6F8F9;
+}
+.date-div h1{
+  float: left;
+  font-size: 1.2em;
+  color: #595959;
+  margin-top: 1.3vh;
+  margin-left: 2vw;
+}
+.date-div input{
+  float: right;
+  margin-top: 1vh;
+  margin-top: 1.3vh;
+  margin-right: 2vw;
+}
+textarea:focus, input:focus{
+  outline: none;
+  cursor: default;
 }
