@@ -13,7 +13,7 @@ body{
 /* Everything inside blue rectangle */
 .rectangle {
   height: 28vh;
-  width: 100%;
+  width: 100vw;
   background-color: #003CFB;
 }
 .group{
@@ -168,6 +168,7 @@ article h4{
   position: fixed;
   bottom: 0;
   margin-top: 10vh;
+  margin-bottom: 1vh;
   left: 43vw;
 }
 .clickable-button{
@@ -343,18 +344,7 @@ p.date{
   padding: 0 5px;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
-a div {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 1em;
-  padding-right: 3.5em;  
-}
-div a span{
+.dropdown span{
   font-size: 0.6em;
 }
 .dropdown {
@@ -373,12 +363,21 @@ div a span{
   color: #4B4B4B;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 3.5em;  
 }
 .dropdown-remove{
   outline: solid 1px #E0E0E0;
   color: #4B4B4B;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  background-color: yellow;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 3.5em;  
 }
 
 .dropdown-container:focus {

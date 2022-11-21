@@ -1,4 +1,5 @@
 const stickyButtonElement = document.querySelector("i.sticky-button")
+var tempID = 5
 stickyButtonElement.addEventListener("click", (e)=>{
   let bodyTarget = document.querySelector('body')
   stickyButtonElement.classList.add('hide-item')
@@ -36,27 +37,30 @@ stickyButtonElement.addEventListener("click", (e)=>{
       <i class="fa-regular fa-circle gray-circle fa-stack-1x clickable-button"></i>
     </span>
     <div class="menu-nav">
-        <div class="dropdown-container" tabindex="-1">
-          <div class="three-dots"></div>
-          <div class="dropdown">
-            <a href="#"><div class="dropdown-edit" id="edit-${todoCount}">
-              <i class="fa-sharp fa-solid fa-pencil edit-pencil"></i>
-              <span class="edit-span">Edit</span></div></a>
-            <a href="#"><div class="dropdown-remove" id="remove-${todoCount}">
-              <i class="fa-solid fa-trash edit-remove"></i>
-              <span class="remove-span">Remove</span></div></a>
-          </div>
-        </div>
+    <div class="dropdown-container" tabindex="-1">
+      <div class="three-dots"></div>
+      <div class="dropdown">
+        <div class="dropdown-edit">
+          <i class="fa-sharp fa-solid fa-pencil edit-pencil"></i>
+          <span class="edit-span">Edit</span></div>
+        <div class="dropdown-remove ${'dropdown-remove-'+tempID}">
+          <i class="fa-solid fa-trash edit-remove"></i>
+          <span class="remove-span">Remove</span></div>
       </div>
+    </div>
+    </div>
     <h4>${titleVal}</h4>
     <p>${descrVal}</p>
     <p class="date"><i class="fa-solid fa-calendar-days"></i>${dateVal}</p>
     `;
     newElement.innerHTML = content
-    newElement.classList.add('todo', 'unfinished-task')
-    newElement.setAttribute('id', 'todo'+todoCount)
+    newElement.classList.add('todo', 'unfinished-task','todo'+tempID)
     target.append(newElement)
+    // newElement.querySelector('.dropdown-remove-'+tempID).addEventListener('click',(e)=>{
+    //   console.log('found clickz')
+    // })
     updateTodoCounter()
+    removeListener(newElement)
   })
   //The following code can also be put into the parent so the popup form gets hidden after submitting new tasks instead of only after clicking X
   document.querySelector('.exit-popup').addEventListener('click', (e)=>{
@@ -65,6 +69,25 @@ stickyButtonElement.addEventListener("click", (e)=>{
     stickyButtonElement.classList.remove('hide-item')
 
   })
+  function removeListener(element){
+    let target = element.querySelector('.dropdown-remove-'+tempID)
+    tempID++
+    target.addEventListener('click',(e)=>{
+      console.log('found clickz')
+      console.log(target.classList)
+    })
+  }
+  // function tempName(){
+  //   let targetClass = '.dropdown-remove-'+tempID
+  //   console.log(targetClass)
+  //   let quick = document.querySelector(targetClass)
+  //   tempID++
+  //   quick.addEventListener('click', (e)=>{
+  //     console.log('clicked new gen')
+      
+  // })
+  // }
+  
 })
 //Turns ints into words E.G. 5 > Five, 21 > Twenty one
 function numToWord(num){
@@ -100,6 +123,8 @@ function updateTodoCounter(){
   }
 }
 updateTodoCounter();
-document.querySelector('div.dropdown-remove').addEventListener('click', (e)=>{
-  console.log('found')
+document.querySelectorAll('div.dropdown-remove').forEach(item=>{
+  item.addEventListener('click',(e)=>{
+    console.log(item.id, 'Clicked')
+  })
 })
