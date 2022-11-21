@@ -30,16 +30,31 @@ stickyButtonElement.addEventListener("click", (e)=>{
     console.log(dateVal)
     let descrVal = document.querySelector('.task-descr-input').value
     let newElement = document.createElement('article')
+    let todoCount = document.querySelectorAll('article.todo').length
     let content = `
     <span class="fa-stack fa-1x green-checkmark clickable-button">
       <i class="fa-regular fa-circle gray-circle fa-stack-1x clickable-button"></i>
     </span>
+    <div class="menu-nav">
+        <div class="dropdown-container" tabindex="-1">
+          <div class="three-dots"></div>
+          <div class="dropdown">
+            <a href="#"><div class="dropdown-edit" id="edit-${todoCount}">
+              <i class="fa-sharp fa-solid fa-pencil edit-pencil"></i>
+              <span class="edit-span">Edit</span></div></a>
+            <a href="#"><div class="dropdown-remove" id="remove-${todoCount}">
+              <i class="fa-solid fa-trash edit-remove"></i>
+              <span class="remove-span">Remove</span></div></a>
+          </div>
+        </div>
+      </div>
     <h4>${titleVal}</h4>
     <p>${descrVal}</p>
-    <p>${dateVal}
+    <p class="date"><i class="fa-solid fa-calendar-days"></i>${dateVal}</p>
     `;
     newElement.innerHTML = content
     newElement.classList.add('todo', 'unfinished-task')
+    newElement.setAttribute('id', 'todo'+todoCount)
     target.append(newElement)
     updateTodoCounter()
   })
@@ -85,3 +100,6 @@ function updateTodoCounter(){
   }
 }
 updateTodoCounter();
+document.querySelector('div.dropdown-remove').addEventListener('click', (e)=>{
+  console.log('found')
+})

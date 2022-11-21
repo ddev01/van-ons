@@ -8,7 +8,7 @@
   margin: 0;
 }
 body{
-  position: absolute;
+  /* position: absolute; */
 }
 /* Everything inside blue rectangle */
 .rectangle {
@@ -292,3 +292,125 @@ textarea:focus, input:focus{
   outline: none;
   cursor: default;
 }
+
+.fa-calendar-days{
+  margin-right: 0.5em;
+}
+p.date{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: #989898;
+}
+/* Todo item dropdown styling */
+.edit-pencil{
+  height: 13px;
+  width: 13px;
+  color: #4B4B4B;
+  font-size: 0.6em;
+  letter-spacing: 0.3px;
+  line-height: 13px;
+  margin-left: 0.3em;
+  margin-right: 0.1em;
+}
+.edit-remove{
+  height: 13px;
+  width: 13px;
+  color: #E43F28;
+  font-size: 0.6em;
+  letter-spacing: 0.3px;
+  line-height: 13px;
+  margin-left: 0.3em;
+  margin-right: 0.1em;
+}
+.remove-span{
+  color: red;
+  margin:auto
+}
+.menu-nav {
+  float:right;
+}
+
+.menu-item {
+  color: #FCC;
+  padding: 3px;
+}
+
+.three-dots:after {
+  cursor: pointer;
+  color: #444;
+  content: '\2807';
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a div {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 3.5em;  
+}
+div a span{
+  font-size: 0.6em;
+}
+.dropdown {
+  position: absolute;
+  right: 13vw;
+  background-color: #FFFFFF;
+  opacity: 0;
+  z-index: -1;
+  max-height: 0;
+  border-radius: 15px;
+  /* outline: solid 1px #E0E0E0; */
+  transition: opacity 0.1s, z-index 0.1s, max-height: 5s;
+}
+.dropdown-edit{
+  outline: solid 1px #E0E0E0;
+  color: #4B4B4B;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.dropdown-remove{
+  outline: solid 1px #E0E0E0;
+  color: #4B4B4B;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.dropdown-container:focus {
+  outline: none;
+}
+.dropdown-container:focus .dropdown {
+  opacity: 1;
+  z-index: 100;
+  max-height: 100vh;
+  transition: opacity 0.2s, z-index 0.2s, max-height: 0.2s;
+.edit-pencil{
+  height: 13px;
+  width: 13px;
+  color: #4B4B4B;
+  font-size: 0.8em;
+  letter-spacing: 0.3px;
+  line-height: 13px;
+  margin-left: 0.3em;
+  margin-right: 0.1em;
+}
+.edit-remove{
+  height: 13px;
+  width: 13px;
+  color: #E43F28;
+  font-size: 0.8em;
+  letter-spacing: 0.3px;
+  line-height: 13px;
+  margin-left: 0.3em;
+  margin-right: 0.1em;
+}
+.remove-span{
+  color: red;
+  margin:auto
+}
+  
