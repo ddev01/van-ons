@@ -99,7 +99,7 @@ function updateTodoCounter(){
   //Conditional statement so we don't add unnecessary overdue tasks sentence when there are none
   if (overdueTodoCount >= 1){
     target.innerHTML = `
-    You have <span class='underline-bold'>${numToWord(unfinishedTodoCount)}</span> todo's, <span class='underline-bold'>${numToWord(overdueTodoCount)}</span> of them is overdue
+    You have <span class='underline-bold'>${numToWord(unfinishedTodoCount + overdueTodoCount)}</span> todo's, <span class='underline-bold'>${numToWord(overdueTodoCount)}</span> of them is overdue
     `
   }
   else{
@@ -112,5 +112,6 @@ updateTodoCounter();
 document.querySelectorAll('div.dropdown-remove').forEach(item=>{
   item.addEventListener('click',(e)=>{
     item.closest('article').remove()
+    updateTodoCounter()
   })
 })
